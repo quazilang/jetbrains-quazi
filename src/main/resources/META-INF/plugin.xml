@@ -1,0 +1,13 @@
+<idea-plugin>
+  <id>org.quazilang.jetbrains</id>
+  <name>Quazi</name>
+  <vendor url="https://github.com/quazilang">Quazi</vendor>
+  <description><![CDATA[Quazi language support backed by <code>qz lsp</code>.]]></description>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lsp</depends>
+  <depends>com.intellij.modules.ultimate</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Quazi" implementationClass="org.quazilang.jetbrains.QuaziFileType" fieldName="INSTANCE" language="Quazi" extensions="qz"/>
+    <platform.lsp.serverSupportProvider implementation="org.quazilang.jetbrains.QuaziLspServerSupportProvider"/>
+  </extensions>
+</idea-plugin>
